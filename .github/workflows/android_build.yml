@@ -1,0 +1,30 @@
+# Workflow name
+name: Android Build
+on:
+  # When it will be triggered
+  # And in which branch
+  pull_request:
+  push:
+    branches:
+      - main
+# Where will they run
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+      ## Checkout our repository ###
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Set up our JDK environment
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+       - name: Run Test
+         run ./gradlew test
+       -name Build Project
+         run  ./gradlew assemble
+      - 
+
+
