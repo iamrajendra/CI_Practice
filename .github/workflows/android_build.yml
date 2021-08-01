@@ -1,5 +1,5 @@
 # Workflow name
-name: Android Build
+name: android_build
 on:
   # When it will be triggered
   # And in which branch
